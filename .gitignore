@@ -1,0 +1,25 @@
+# Fichiers et dossiers Python
+__pycache__/
+*.py[cod]
+*.class
+
+# Environnements virtuels
+venv/
+env/
+
+# Fichiers de log
+*.log
+
+# Données brutes
+data/raw_data/
+
+# Fichiers de configuration sensibles
+config/*.yml
+config/*.conf
+
+# Dossier de build
+build/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
