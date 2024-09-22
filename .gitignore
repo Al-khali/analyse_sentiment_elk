@@ -23,3 +23,16 @@ build/
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Fichiers d'assets
+assets/
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.ico
+*.cur

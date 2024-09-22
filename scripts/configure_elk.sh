@@ -13,7 +13,7 @@ discovery.type: single-node
 xpack.security.enabled: true
 EOT
 
-# Définition du mot de passe pour l'utilisateur 'elastic'
+# Définition du mot de passe pour l'utilisateur 'elastic' , les mots ici sont des mots de passe qui sont changer dans les verions sur ma machine ici c'est juste pour le script
 echo "y" | sudo /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive <<EOF
 $ELASTIC_PASSWORD
 $ELASTIC_PASSWORD
@@ -23,7 +23,7 @@ $ELASTIC_PASSWORD
 $ELASTIC_PASSWORD
 EOF
 
-# Configuration de Kibana avec authentification
+# Configuration de Kibana avec authentification pareille ici 
 sudo tee -a /etc/kibana/kibana.yml > /dev/null <<EOT
 server.host: "0.0.0.0"
 elasticsearch.hosts: ["http://localhost:9200"]
