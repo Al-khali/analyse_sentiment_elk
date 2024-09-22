@@ -1,8 +1,48 @@
-elasticsearch==7.13.1
-pymongo==3.11.4
-textblob==0.15.3
-requests==2.25.1
-selenium==3.141.0
-psutil==5.8.0
-kafka-python==2.0.2
-instaloader==4.7.1
+# Bibliothèques pour ELK
+elasticsearch==7.17.9
+elasticsearch-dsl==7.4.1
+
+# Scraping et API
+facebook-sdk==3.1.0
+instaloader==4.9.5
+requests==2.31.0
+
+# Analyse de sentiment
+vaderSentiment==3.3.2
+
+# Gestion de base de données
+pymongo==4.3.3
+
+# Framework web pour le service d'analyse de sentiment
+Flask==2.3.2
+
+# Traitement des données
+pandas==2.0.3
+numpy==1.25.1
+
+# Visualisation (utile pour Kibana si nécessaire)
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# Utilitaires
+python-dotenv==1.0.0
+
+# Tests
+pytest==7.4.0
+
+# Logging amélioré
+loguru==0.7.0
+
+# Gestion des tâches asynchrones (si nécessaire pour le scraping)
+celery==5.3.1
+
+# Sécurité
+cryptography==41.0.1
+
+# Formatage et linting
+black==23.3.0
+flake8==6.0.0
+
+
+# Documentation
+Sphinx==7.0.1

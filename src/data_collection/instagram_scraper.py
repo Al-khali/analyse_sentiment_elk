@@ -1,5 +1,9 @@
 import instaloader
 from data_storage.mongodb_handler import MongoDBHandler
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class InstagramScraper:
     def __init__(self):
@@ -29,8 +33,11 @@ class InstagramScraper:
             print(f"Error scraping Instagram: {e}")
 
 if __name__ == "__main__":
-    HASHTAG = "jacqueschirac"
-    TOPIC = "décès du président Jacques Chirac"
+    HASHTAG = os.getenv('INSTAGRAM_HASHTAG')
+    TOPIC = os.getenv('INSTAGRAM_TOPIC')
+    
+    if not HASHTAG or not TOPIC:
+        raise ValueError("INSTAGRAM_HASHTAG or INSTAGRAM_TOPIC not found in .env file")
     
     scraper = InstagramScraper()
     scraper.scrape_posts(HASHTAG, TOPIC)
