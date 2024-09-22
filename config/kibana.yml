@@ -1,0 +1,27 @@
+# /config/kibana.yml
+
+# Configuration du serveur
+server.port: 5601
+server.host: "0.0.0.0"
+
+# Elasticsearch
+# Ces configurations sont des exemples pour une utilisation locale.
+# Elles seront correctement configurées sur ma machine.
+elasticsearch.hosts: ["http://localhost:9200"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "votre_mot_de_passe_sécurisé"
+
+# Sécurité
+xpack.security.enabled: true
+
+# Chemin de base (utile si derrière un proxy)
+server.basePath: "/kibana"
+
+# Logo personnalisé
+kibana.logo.url: "/ui/logo/custom_logo.png"
+
+# Langue par défaut
+i18n.locale: "fr"
+
+# Logging
+logging.dest: /var/log/kibana/kibana.log

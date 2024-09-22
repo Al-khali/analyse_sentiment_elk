@@ -1,0 +1,29 @@
+# /config/elasticsearch.yml
+
+# Nom du cluster
+cluster.name: mon-cluster-elk
+
+# Nom du nœud
+node.name: node-1
+
+# Répertoire des données
+path.data: /var/lib/elasticsearch
+
+# Répertoire des logs
+path.logs: /var/log/elasticsearch
+
+# Liaison réseau
+network.host: 0.0.0.0
+
+# Port HTTP
+http.port: 9200
+
+# Découverte
+discovery.type: single-node
+
+# Sécurité de base (à activer en production)
+xpack.security.enabled: true
+#xpack.security.transport.ssl.enabled: true
+
+# Mémoire
+#bootstrap.memory_lock: true

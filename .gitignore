@@ -14,9 +14,7 @@ env/
 # Données brutes
 data/raw_data/
 
-# Fichiers de configuration sensibles
-config/*.yml
-config/*.conf
+
 
 # Dossier de build
 build/
