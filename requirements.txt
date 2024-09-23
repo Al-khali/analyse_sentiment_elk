@@ -5,7 +5,7 @@ elasticsearch-dsl==7.4.1
 # Scraping et API
 facebook-sdk==3.1.0
 instaloader==4.9.5
-requests==2.31.0
+requests==2.32.2
 
 # Analyse de sentiment
 vaderSentiment==3.3.2
