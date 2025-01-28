@@ -11,7 +11,7 @@ requests==2.31.0
 vaderSentiment==3.3.2
 
 # Gestion de base de données
-pymongo==4.3.3
+pymongo==4.6.3
 
 # Framework web pour le service d'analyse de sentiment
 Flask==2.3.2
