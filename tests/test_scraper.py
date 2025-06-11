@@ -4,8 +4,8 @@ from src.data_collection.facebook_scraper import FacebookScraper
 from src.data_collection.instagram_scraper import InstagramScraper
 
 @pytest.fixture
-def mock_facebook_api():
-    with patch('facebook.GraphAPI') as mock:
+def mock_facebook_scraper():
+    with patch('src.data_collection.facebook_scraper.get_posts') as mock:
         yield mock
 
 @pytest.fixture
@@ -13,17 +13,16 @@ def mock_instaloader():
     with patch('instaloader.Instaloader') as mock:
         yield mock
 
-def test_facebook_scraper(mock_facebook_api):
-    # Mock the Facebook API response
-    mock_facebook_api.return_value.get_connections.return_value = {
-        'data': [
-            {
-                'id': '1',
-                'message': 'Test post about Jacques Chirac',
-                'created_time': '2023-09-22T10:00:00+0000'
-            }
-        ]
+def test_facebook_scraper(mock_facebook_scraper):
+    # Mock the facebook-scraper response
+    mock_post = {
+        'post_id': '1',
+        'text': 'Test post about Jacques Chirac',
+        'time': '2023-09-22T10:00:00+0000',
+        'likes': 10,
+        'comments': 5
     }
+    mock_facebook_scraper.return_value = [mock_post]
     
     scraper = FacebookScraper('fake_token')
     scraper.db_handler = MagicMock()  # Mock the database handler

@@ -1,9 +1,9 @@
 from pymongo import MongoClient
 
 class MongoDBHandler:
-    def __init__(self, uri="mongodb://localhost:27017/"):
+    def __init__(self, uri="mongodb://localhost:27017/", db_name='social_media_data'):
         self.client = MongoClient(uri)
-        self.db = self.client['social_media_data']
+        self.db = self.client[db_name]
         self.collection = self.db['posts']
 
     def insert_post(self, post_data):
