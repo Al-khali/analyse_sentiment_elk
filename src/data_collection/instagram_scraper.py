@@ -1,5 +1,5 @@
 import instaloader
-from data_storage.mongodb_handler import MongoDBHandler
+from ..data_storage.mongodb_handler import MongoDBHandler
 import os
 from dotenv import load_dotenv
 

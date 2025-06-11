@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify
-from sentiment_analyzer import SentimentAnalyzer
 from loguru import logger
 from werkzeug.exceptions import BadRequest
+
+try:
+    from .sentiment_analyzer import SentimentAnalyzer
+except ImportError:
+    from sentiment_analyzer import SentimentAnalyzer
 
 app = Flask(__name__)
 analyzer = SentimentAnalyzer()

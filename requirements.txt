@@ -1,48 +1,33 @@
-# Bibliothèques pour ELK
-elasticsearch==7.17.9
-elasticsearch-dsl==7.4.1
+# Core ELK Stack dependencies
+elasticsearch==8.18.1
+elasticsearch-dsl==8.18.0
 
-# Scraping et API
-facebook-sdk==3.1.0
-instaloader==4.9.5
+# Social media scraping
+facebook-scraper==0.2.59
+instaloader==4.14.1
 requests==2.32.4
 
-# Analyse de sentiment
+# Sentiment analysis
 vaderSentiment==3.3.2
 
-# Gestion de base de données
-pymongo==4.6.3
+# Database
+pymongo==4.13.0
 
-# Framework web pour le service d'analyse de sentiment
-Flask==2.3.2
+# Web framework
+Flask==3.1.1
 
-# Traitement des données
-pandas==2.0.3
-numpy==1.25.1
+# Configuration management
+python-dotenv==1.1.0
 
-# Visualisation (utile pour Kibana si nécessaire)
-matplotlib==3.7.2
-seaborn==0.12.2
+# Logging
+loguru==0.7.3
 
-# Utilitaires
-python-dotenv==1.0.0
+# Testing
+pytest==8.4.0
 
-# Tests
-pytest==7.4.0
+# Additional dependencies for facebook-scraper
+lxml_html_clean==0.4.2
 
-# Logging amélioré
-loguru==0.7.0
-
-# Gestion des tâches asynchrones (si nécessaire pour le scraping)
-celery==5.3.1
-
-# Sécurité
-cryptography==44.0.1
-
-# Formatage et linting
-black==24.3.0
-flake8==6.0.0
-
-
-# Documentation
-Sphinx==7.0.1
+# Development tools (optional)
+black==25.1.0
+flake8==7.2.0
