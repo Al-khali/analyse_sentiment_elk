@@ -5,7 +5,7 @@ elasticsearch-dsl==8.18.0
 # Social media scraping
 facebook-scraper==0.2.59
 instaloader==4.14.1
-requests==2.32.4
+requests==2.33.0
 
 # Sentiment analysis
 vaderSentiment==3.3.2
