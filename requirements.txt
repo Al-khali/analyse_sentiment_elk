@@ -23,7 +23,7 @@ python-dotenv==1.1.0
 loguru==0.7.3
 
 # Testing
-pytest==8.4.0
+pytest==9.0.3
 
 # Additional dependencies for facebook-scraper
 lxml_html_clean==0.4.4
